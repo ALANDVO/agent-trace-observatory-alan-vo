@@ -1,0 +1,77 @@
+{
+  "realm": "agent-observatory",
+  "enabled": true,
+  "displayName": "Agent Trace Observatory",
+  "sslRequired": "external",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": false,
+  "editUsernameAllowed": false,
+  "roles": {
+    "realm": [
+      {
+        "name": "admin",
+        "description": "Administrator role with full access to configuration, redactions, and trace management"
+      },
+      {
+        "name": "analyst",
+        "description": "Analyst role with access to import traces, run analytics, and view evaluations"
+      },
+      {
+        "name": "viewer",
+        "description": "Read-only viewer role for traces and dashboard metrics"
+      }
+    ]
+  },
+  "groups": [],
+  "defaultRoles": ["viewer"],
+  "clients": [
+    {
+      "clientId": "agent-trace-observatory",
+      "name": "Agent Trace Observatory Backend",
+      "enabled": true,
+      "publicClient": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": false,
+      "redirectUris": [
+        "http://127.0.0.1:8000/api/auth/callback",
+        "http://localhost:8000/api/auth/callback"
+      ],
+      "webOrigins": [
+        "http://127.0.0.1:5173",
+        "http://localhost:5173"
+      ],
+      "secret": "dev-client-secret-change-in-production",
+      "protocol": "openid-connect",
+      "attributes": {
+        "pkce.code.challenge.method": "S256",
+        "post.logout.redirect.uris": "http://127.0.0.1:5173"
+      }
+    }
+  ],
+  "identityProviders": [
+    {
+      "alias": "saml-enterprise-idp",
+      "displayName": "Enterprise SAML Identity Provider",
+      "providerId": "saml",
+      "enabled": false,
+      "trustEmail": true,
+      "storeToken": false,
+      "addReadTokenRoleOnCreate": false,
+      "authenticateByDefault": false,
+      "linkOnly": false,
+      "firstBrokerLoginFlowAlias": "first broker login",
+      "config": {
+        "entityId": "http://127.0.0.1:8080/realms/agent-observatory",
+        "singleSignOnServiceUrl": "https://idp.example.com/saml/sso",
+        "nameIDPolicyFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+        "wantAuthnRequestsSigned": "true",
+        "validateSignature": "true",
+        "signatureAlgorithm": "RSA_SHA256"
+      }
+    }
+  ]
+}

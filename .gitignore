@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+build/
+.vite/
+npm-debug.log*
+
+# Database & Environment
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.local
+
+# Agent metadata
+.antigravitycli/
+.omp/

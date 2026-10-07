@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "name": "agent-trace-observatory-alan-vo",
+  "owner": "ALANDVO",
+  "email": "alanvo@gmail.com",
+  "domain": "ai-agents",
+  "workflows": [
+    "Structured agent trace ingestion and automated PII/secret redaction pipeline",
+    "Tool-call dependency DAG construction with execution cycle and retry cascade detection",
+    "Token cost accounting, failure pattern clustering and reproducible benchmark evaluation"
+  ],
+  "auth": "oidc-keycloak-saml-broker",
+  "llm_providers": [
+    "openai-compatible",
+    "anthropic",
+    "gemini",
+    "ollama"
+  ],
+  "summary": "AI agent execution trace observatory providing deterministic tool-call DAG visualization, token cost attribution, failure pattern classification, and automated input redaction with reproducible benchmark evaluations.",
+  "version": "1.0.0"
+}
