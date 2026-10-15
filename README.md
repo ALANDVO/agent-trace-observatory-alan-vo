@@ -1,5 +1,8 @@
 # Agent Trace Observatory — Alan Vo | AI & Machine Learning
 
+> Work in progress. This checkpoint may be incomplete or fail tests. See PLAN.md and STATUS.md before use.
+
+
 Current version: `1.0.0`.
 
 Autonomous multi-step AI agents frequently experience catastrophic execution failures caused by unhandled tool exceptions, recursive retry loops, token budget exhaustion, and inadvertent leakage of sensitive credentials or personally identifiable information (PII) in tool arguments. **Agent Trace Observatory** provides an automated trace ingestion and observability platform built for AI systems engineers, agent evaluators, and LLM reliability researchers. It deterministically reconstructs chronological agent execution spans into tool-call dependency DAGs, isolates cyclic retry oscillations, attributes token expenditures across model providers, and applies high-recall regex sanitization to redact credentials before serialization or advisory analysis.

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-trace-observatory-alan-vo"
-version = "1.0.0"
+version = "1.1.0"
 description = "Import structured agent traces, visualize tool-call DAGs, token costs, retries and failure patterns with redacted inputs."
 readme = "README.md"
 requires-python = ">=3.12"

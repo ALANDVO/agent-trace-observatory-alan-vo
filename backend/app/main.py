@@ -9,6 +9,7 @@ from app.api.routes.analytics import router as analytics_router
 from app.api.routes.auth import router as auth_router
 from app.api.routes.evaluation import router as eval_router
 from app.api.routes.export import router as export_router
+from app.api.routes.redaction import router as redaction_router
 from app.api.routes.traces import router as traces_router
 from app.core.config import settings
 from app.core.database import init_db
@@ -71,7 +72,7 @@ app.include_router(traces_router, prefix="/api")
 app.include_router(analytics_router, prefix="/api")
 app.include_router(eval_router, prefix="/api")
 app.include_router(export_router, prefix="/api")
-
+app.include_router(redaction_router, prefix="/api")
 
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
