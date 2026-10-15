@@ -78,9 +78,18 @@ def init_db() -> None:
                 executed_at REAL NOT NULL, metrics_json TEXT NOT NULL
             );
             CREATE TABLE IF NOT EXISTS redaction_rules (
-                id INTEGER PRIMARY KEY AUTOINCREMENT, rule_name TEXT UNIQUE NOT NULL, pattern TEXT NOT NULL,
-                replacement TEXT NOT NULL, category TEXT NOT NULL, enabled INTEGER DEFAULT 1, created_at REAL NOT NULL
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                rule_name TEXT UNIQUE NOT NULL,
+                pattern TEXT NOT NULL,
+                replacement TEXT NOT NULL,
+                category TEXT NOT NULL,
+                pattern_type TEXT NOT NULL DEFAULT 'regex',
+                is_builtin INTEGER DEFAULT 0,
+                enabled INTEGER DEFAULT 1,
+                created_at REAL NOT NULL,
+                updated_at REAL NOT NULL
             );
+            CREATE INDEX IF NOT EXISTS idx_redaction_rules_enabled ON redaction_rules(enabled);
         """)
 
 

@@ -28,6 +28,9 @@ def setup_test_db():
         conn.execute("DELETE FROM audit_logs;")
         conn.execute("DELETE FROM evaluation_runs;")
         conn.execute("DELETE FROM redaction_rules;")
+    # Re-seed database to ensure demo traces and rules exist
+    from app.core.seed import seed_database
+    seed_database()
     yield
 
 

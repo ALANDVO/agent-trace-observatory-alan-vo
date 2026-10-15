@@ -16,6 +16,7 @@
     "gemini",
     "ollama"
   ],
-  "summary": "AI agent execution trace observatory providing deterministic tool-call DAG visualization, token cost attribution, failure pattern classification, and automated input redaction with reproducible benchmark evaluations.",
-  "version": "1.0.0"
+  "summary": "Work in progress: agent-trace-observatory-alan-vo",
+  "version": "1.1.0",
+  "status": "work-in-progress"
 }

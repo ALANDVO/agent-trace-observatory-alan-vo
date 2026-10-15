@@ -18,6 +18,12 @@ async def export_traces(
     user: UserSession = Depends(require_role(Role.VIEWER))
 ):
     """Export stored agent trace records formatted as JSON or CSV."""
+    fieldnames = [
+        "trace_id", "agent_name", "status", "model", "root_goal",
+        "total_tokens", "prompt_tokens", "completion_tokens",
+        "total_cost_usd", "duration_seconds", "step_count",
+        "tool_call_count", "error_count", "redactions_count", "created_at"
+    ]
     with get_db() as conn:
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM traces ORDER BY created_at DESC")
@@ -25,12 +31,6 @@ async def export_traces(
 
     if format == "csv":
         output = io.StringIO()
-        fieldnames = [
-            "trace_id", "agent_name", "status", "model", "root_goal",
-            "total_tokens", "prompt_tokens", "completion_tokens",
-            "total_cost_usd", "duration_seconds", "step_count",
-            "tool_call_count", "error_count", "redactions_count", "created_at"
-        ]
         writer = csv.DictWriter(output, fieldnames=fieldnames)
         writer.writeheader()
         for r in rows:
