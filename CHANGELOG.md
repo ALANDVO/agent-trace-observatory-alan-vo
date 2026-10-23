@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
 ## 1.1.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
@@ -8,6 +12,16 @@ All notable changes to the Agent Trace Observatory project will be documented in
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.1.0] - 2026-10-23
+
+### Added
+- Frontend test suite for Redaction Rules Manager component (`frontend/src/test/RedactionRulesManager.test.tsx`) covering rule table rendering, status badges, built-in indicators, edit/delete workflows, form cancellation, loading states, and error handling.
+- 9 new frontend tests bringing total to 13 frontend tests and 48 total tests across the stack.
+
+### Fixed
+- Verified all 35 backend tests and 13 frontend tests pass consistently.
+- Confirmed production build succeeds for both backend and frontend Docker images.
 
 ## [1.1.0] - 2026-10-15
 
