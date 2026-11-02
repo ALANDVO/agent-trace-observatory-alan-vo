@@ -45,7 +45,8 @@ class RedactionEngine:
                 for r in c.execute("SELECT rule_name,pattern,replacement,category FROM redaction_rules WHERE enabled=1 AND is_builtin=0").fetchall():
                     try: out.append((r["rule_name"], r["category"], re.compile(r["pattern"]), r["replacement"]))
                     except re.error: pass
-        except: pass
+        except Exception:
+            pass
         cls._cache, cls._ts = out, now
         return out
 

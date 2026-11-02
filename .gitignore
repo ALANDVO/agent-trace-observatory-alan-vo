@@ -25,3 +25,11 @@ npm-debug.log*
 # Agent metadata
 .antigravitycli/
 .omp/
+venv/
+*.pyc
+*.db-wal
+*.db-shm
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
