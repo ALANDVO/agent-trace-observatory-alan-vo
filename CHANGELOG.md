@@ -1,8 +1,15 @@
 # Changelog
 
+## 1.3.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
 ## 1.2.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
+
+### Fixed
+- Fixed bare `except:` in redaction engine `_load()` method to catch `Exception` only, preventing accidental suppression of `KeyboardInterrupt` and `SystemExit` (backend/app/services/redaction.py)
 
 ## 1.1.0 — work-in-progress checkpoint
 
