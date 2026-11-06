@@ -1,8 +1,16 @@
 # Changelog
 
+## 1.4.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
 ## 1.3.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
+
+### Fixed
+- Fixed custom redaction rules engine to respect `pattern_type` field (regex vs literal) when loading rules from database, enabling literal string matching for custom rules (backend/app/services/redaction.py)
+- Added test coverage for literal pattern custom rules during trace ingestion (backend/tests/test_redaction_rules.py)
 
 ## 1.2.0 — work-in-progress checkpoint
 

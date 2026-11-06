@@ -42,8 +42,12 @@ class RedactionEngine:
         out = []
         try:
             with get_db() as c:
-                for r in c.execute("SELECT rule_name,pattern,replacement,category FROM redaction_rules WHERE enabled=1 AND is_builtin=0").fetchall():
-                    try: out.append((r["rule_name"], r["category"], re.compile(r["pattern"]), r["replacement"]))
+                for r in c.execute("SELECT rule_name,pattern,replacement,category,pattern_type FROM redaction_rules WHERE enabled=1 AND is_builtin=0").fetchall():
+                    try:
+                        pattern = r["pattern"]
+                        if r["pattern_type"] == "literal":
+                            pattern = re.escape(pattern)
+                        out.append((r["rule_name"], r["category"], re.compile(pattern), r["replacement"]))
                     except re.error: pass
         except Exception:
             pass
