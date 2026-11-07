@@ -26,4 +26,4 @@ Tests: `backend/tests/test_redaction_rules.py (new test file)`, `frontend/src/te
 
 ---
 
-Alan Vo · [alanvo.net](https://alanvo.net)
+Alan Vo · [alanvo.net](https://alanvo.net) · [X: @alanvoasi](https://x.com/alanvoasi)
