@@ -1,6 +1,17 @@
 # Changelog
 
+## 1.5.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
 ## 1.4.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
+### Added
+- Frontend test pattern modal for custom redaction rules: admins can now test regex/literal patterns against sample text before saving, with real-time validation feedback, sanitized preview, and match position details (frontend/src/components/RedactionRulesManager.tsx)
+
+## 1.3.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
 

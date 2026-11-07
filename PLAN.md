@@ -24,6 +24,20 @@ Implementation: `backend/app/core/database.py (schema migration)`, `backend/app/
 
 Tests: `backend/tests/test_redaction_rules.py (new test file)`, `frontend/src/test/RedactionRulesManager.test.tsx (new test file)`
 
+### test-pattern-ui — Redaction Pattern Testing UI
+
+Status: done
+
+Acceptance:
+- Admin users can test custom redaction patterns against sample text before saving
+- Test modal shows pattern validity, sanitized output, and match positions
+- Supports both regex and literal pattern types
+- Accessible via "Test" button in rules table
+
+Implementation: `frontend/src/components/RedactionRulesManager.tsx (test modal and button)`
+
+Tests: `backend/tests/test_redaction_rules.py (existing testRedactionPattern API tests)`
+
 ---
 
 Alan Vo · [alanvo.net](https://alanvo.net) · [X: @alanvoasi](https://x.com/alanvoasi)
