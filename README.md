@@ -233,3 +233,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 **Author**: Alan Vo  
 **Email**: [alanvo@gmail.com](mailto:alanvo@gmail.com)  
 **GitHub**: [ALANDVO](https://github.com/ALANDVO)
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

@@ -65,3 +65,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fully typed React 18 + TypeScript + Vite frontend with dark-mode dashboard, interactive DAG visualization, span waterfall inspector, template importer, and CSV/JSON data export.
 - Reproducible AI/ML benchmark evaluation suite with curated dataset of 12 multi-step agent trajectories and CLI evaluation command.
 - Production-ready Dockerfiles with non-root users, healthchecks, and local docker compose deployment configuration.
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

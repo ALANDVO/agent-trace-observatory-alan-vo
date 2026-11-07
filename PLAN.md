@@ -24,3 +24,6 @@ Implementation: `backend/app/core/database.py (schema migration)`, `backend/app/
 
 Tests: `backend/tests/test_redaction_rules.py (new test file)`, `frontend/src/test/RedactionRulesManager.test.tsx (new test file)`
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)
