@@ -261,3 +261,7 @@ class AuditLogItem(BaseModel):
     details: str
     ip_address: str
     created_at: float
+
+class RedactionRule(BaseModel):
+    """Custom redaction rule."""
+    pass
