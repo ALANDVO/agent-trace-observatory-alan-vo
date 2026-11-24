@@ -14,6 +14,7 @@ export const RedactionRulesManager: React.FC<P> = ({ isOpen, onClose }) => {
   const [fm, setFm] = useState<Omit<RedactionRule,'id'|'created_at'|'updated_at'|'is_builtin'>>({
     rule_name: '', pattern: '', replacement: '', category: 'SECRET_KEY', pattern_type: 'regex', enabled: true
   });
+  const [ed, setEd] = useState<RedactionRule|null>(null);
   const [te, setTe] = useState<{rule: RedactionRule|null; req: RedactionTestRequest; res: RedactionTestResponse|null; loading: boolean}|null>(null);
   const [ter, setTer] = useState<string|null>(null);
 
